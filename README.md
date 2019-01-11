@@ -98,3 +98,15 @@ ok      github.com/runzexia/kubesphere-crd-sample/pkg/controller/workspace      
 go build -o bin/manager github.com/runzexia/kubesphere-crd-sample/cmd/manager
 
 ```
+
+## Step 5
+
+edit `pkg/apis/apis.go` add openapi-gen command to generate `openapi_generated.go`
+`openapi_generated.go` will be used when generating `swagger.json`
+
+```go
+// Generate openapi for apis
+//go:generate go run ../../vendor/k8s.io/kube-openapi/cmd/openapi-gen/openapi-gen.go -O openapi_generated -i ./iam/v1alpha2 -p github.com/runzexia/kubesphere-crd-sample/pkg/apis/iam/v1alpha2 -h ../../hack/boilerplate.go.txt
+//go:generate go run ../../vendor/k8s.io/kube-openapi/cmd/openapi-gen/openapi-gen.go -O openapi_generated -i ./devops/v1alpha2 -p github.com/runzexia/kubesphere-crd-sample/pkg/apis/devops/v1alpha2 -h ../../hack/boilerplate.go.txt
+
+```
