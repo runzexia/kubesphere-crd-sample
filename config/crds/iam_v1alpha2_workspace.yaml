@@ -27,8 +27,19 @@ spec:
         metadata:
           type: object
         spec:
+          properties:
+            description:
+              description: Description is Description of Workspace
+              type: string
+            displayName:
+              description: DisplayName is DisplayName of Workspace
+              type: string
           type: object
         status:
+          properties:
+            phase:
+              description: Phase is Status of Workspace
+              type: string
           type: object
   version: v1alpha2
 status:

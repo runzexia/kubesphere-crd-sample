@@ -72,3 +72,29 @@ ok  	github.com/runzexia/kubesphere-crd-sample/pkg/controller/devopsproject	9.25
 ?   	github.com/runzexia/kubesphere-crd-sample/cmd/manager	[no test files]
 ```
 
+## Step 4
+
+edit `pkg/apis/devops/v1alpha2/devopsproject_types.go` and `pkg/apis/iam/v1alpha2/workspace_types.go`, run `make` to regenerate code
+
+```bash
+$ make
+go generate ./pkg/... ./cmd/...
+go fmt ./pkg/... ./cmd/...
+go vet ./pkg/... ./cmd/...
+go run vendor/sigs.k8s.io/controller-tools/cmd/controller-gen/main.go all
+CRD manifests generated under '/Users/runzexia/go/src/github.com/runzexia/kubesphere-crd-sample/config/crds' 
+RBAC manifests generated under '/Users/runzexia/go/src/github.com/runzexia/kubesphere-crd-sample/config/rbac' 
+go test ./pkg/... ./cmd/... -coverprofile cover.out
+?       github.com/runzexia/kubesphere-crd-sample/pkg/apis      [no test files]
+?       github.com/runzexia/kubesphere-crd-sample/pkg/apis/devops       [no test files]
+ok      github.com/runzexia/kubesphere-crd-sample/pkg/apis/devops/v1alpha2      9.306s  coverage: 23.4% of statements
+?       github.com/runzexia/kubesphere-crd-sample/pkg/apis/iam  [no test files]
+ok      github.com/runzexia/kubesphere-crd-sample/pkg/apis/iam/v1alpha2 9.032s  coverage: 23.4% of statements
+?       github.com/runzexia/kubesphere-crd-sample/pkg/controller        [no test files]
+ok      github.com/runzexia/kubesphere-crd-sample/pkg/controller/devopsproject  10.713s coverage: 73.0% of statements
+ok      github.com/runzexia/kubesphere-crd-sample/pkg/controller/workspace      11.022s coverage: 73.0% of statements
+?       github.com/runzexia/kubesphere-crd-sample/pkg/webhook   [no test files]
+?       github.com/runzexia/kubesphere-crd-sample/cmd/manager   [no test files]
+go build -o bin/manager github.com/runzexia/kubesphere-crd-sample/cmd/manager
+
+```

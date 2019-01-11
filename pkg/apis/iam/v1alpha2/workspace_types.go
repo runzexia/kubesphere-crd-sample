@@ -27,12 +27,21 @@ import (
 type WorkspaceSpec struct {
 	// INSERT ADDITIONAL SPEC FIELDS - desired state of cluster
 	// Important: Run "make" to regenerate code after modifying this file
+
+	// DisplayName is DisplayName of Workspace
+	DisplayName string `json:"displayName,omitempty"`
+
+	// Description is Description of Workspace
+	Description string `json:"description,omitempty"`
 }
 
 // WorkspaceStatus defines the observed state of Workspace
 type WorkspaceStatus struct {
 	// INSERT ADDITIONAL STATUS FIELD - define observed state of cluster
 	// Important: Run "make" to regenerate code after modifying this file
+
+	// Phase is Status of Workspace
+	Phase string `json:"phase,omitempty"`
 }
 
 // +genclient

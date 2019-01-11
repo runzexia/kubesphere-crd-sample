@@ -27,12 +27,21 @@ import (
 type DevOpsProjectSpec struct {
 	// INSERT ADDITIONAL SPEC FIELDS - desired state of cluster
 	// Important: Run "make" to regenerate code after modifying this file
+
+	// DisplayName is DisplayName of DevOpsProject
+	DisplayName string `json:"displayName,omitempty"`
+
+	// Description is Description of DevOpsProject
+	Description string `json:"description,omitempty"`
 }
 
 // DevOpsProjectStatus defines the observed state of DevOpsProject
 type DevOpsProjectStatus struct {
 	// INSERT ADDITIONAL STATUS FIELD - define observed state of cluster
 	// Important: Run "make" to regenerate code after modifying this file
+
+	// Phase is Status of DevOpsProject
+	Phase string `json:"phase,omitempty"`
 }
 
 // +genclient
