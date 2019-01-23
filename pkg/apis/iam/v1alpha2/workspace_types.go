@@ -21,9 +21,9 @@ import (
 )
 
 const (
-	ResourceKindDevOpsProject       = "Workspace"
-	ResourceSingularDevOpsProject   = "workspace"
-	ResourcePluralDevOpsProject     = "workspaces"
+	ResourceKindWorkspace       = "Workspace"
+	ResourceSingularWorkspace  = "workspace"
+	ResourcePluralWorkspace     = "workspaces"
 )
 
 // EDIT THIS FILE!  THIS IS SCAFFOLDING FOR YOU TO OWN!
