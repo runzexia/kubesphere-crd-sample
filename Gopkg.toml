@@ -30,6 +30,11 @@ required = [
   name="sigs.k8s.io/controller-tools"
   version="v0.1.1"
 
+[[constraint]]
+  name = "k8s.io/kube-openapi"
+  revision = "e3762e86a74c878ffed47484592986685639c2cd"
+
+
 # For dependency below: Refer to issue https://github.com/golang/dep/issues/1799
 [[override]]
 name = "gopkg.in/fsnotify.v1"

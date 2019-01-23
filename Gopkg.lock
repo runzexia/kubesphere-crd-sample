@@ -10,12 +10,12 @@
   version = "v0.34.0"
 
 [[projects]]
-  digest = "1:c4c7fcd09c36189495aaa1913ecd15d238e607494eb01ce076fb1a9967eaf1e1"
+  digest = "1:dd4d61cc694a1985a0933f9198eea873d91ffa2756c42ae98c611df853ffc5e5"
   name = "github.com/PuerkitoBio/purell"
   packages = ["."]
   pruneopts = "T"
-  revision = "0bcb03f4b4d0a9428594752bd2a3b9aa0a9d4bd4"
-  version = "v1.1.0"
+  revision = "8a290539e2e8629dbc4e6bad948158f790ec31f4"
+  version = "v1.0.0"
 
 [[projects]]
   branch = "master"
@@ -565,6 +565,7 @@
   digest = "1:24db346d9931fe01f1e9a02aba78ba22c1ecd55bf0f79dd10ba5169719cf002d"
   name = "golang.org/x/text"
   packages = [
+    "cases",
     "collate",
     "collate/build",
     "encoding",
@@ -577,6 +578,7 @@
     "encoding/simplifiedchinese",
     "encoding/traditionalchinese",
     "encoding/unicode",
+    "internal",
     "internal/colltab",
     "internal/gen",
     "internal/tag",
@@ -586,6 +588,7 @@
     "language",
     "runes",
     "secure/bidirule",
+    "secure/precis",
     "transform",
     "unicode/bidi",
     "unicode/cldr",
@@ -906,15 +909,14 @@
   version = "v0.1.0"
 
 [[projects]]
-  branch = "master"
-  digest = "1:7a2bb2ca43506e9ba9ef850952e20dc0557643836c4d509a8524b475d4734ebb"
+  digest = "1:5ba9c1ba0b1e093b520e32e3c9e941b4187b79be8b63dfebcccb43b4e9f8f414"
   name = "k8s.io/kube-openapi"
   packages = [
     "pkg/common",
     "pkg/util/proto",
   ]
   pruneopts = "T"
-  revision = "0317810137be915b9cf888946c6e115c1bfac693"
+  revision = "e3762e86a74c878ffed47484592986685639c2cd"
 
 [[projects]]
   digest = "1:a26e60736c5e36819f82aaadcb413877b9776d0f03913411fd416186f1f7a1fe"
