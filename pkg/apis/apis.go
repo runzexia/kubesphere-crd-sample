@@ -18,8 +18,8 @@ limitations under the License.
 //go:generate go run ../../vendor/k8s.io/code-generator/cmd/deepcopy-gen/main.go -O zz_generated.deepcopy -i ./... -h ../../hack/boilerplate.go.txt
 
 // Generate openapi for apis
-//go:generate go run ../../vendor/k8s.io/kube-openapi/cmd/openapi-gen/openapi-gen.go -O openapi_generated -i ./iam/v1alpha2 -p github.com/runzexia/kubesphere-crd-sample/pkg/apis/iam/v1alpha2 -h ../../hack/boilerplate.go.txt
-//go:generate go run ../../vendor/k8s.io/kube-openapi/cmd/openapi-gen/openapi-gen.go -O openapi_generated -i ./devops/v1alpha2 -p github.com/runzexia/kubesphere-crd-sample/pkg/apis/devops/v1alpha2 -h ../../hack/boilerplate.go.txt
+//go:generate go run ../../vendor/k8s.io/kube-openapi/cmd/openapi-gen/openapi-gen.go -O openapi_generated -i ../../vendor/k8s.io/api/core/v1,../../vendor/k8s.io/apimachinery/pkg/apis/meta/v1,../../vendor/k8s.io/apimachinery/pkg/api/resource,../../vendor/k8s.io/apimachinery/pkg/runtime,../../vendor/k8s.io/apimachinery/pkg/util/intstr,k8s.io/apimachinery/pkg/version,./iam/v1alpha2 -p github.com/runzexia/kubesphere-crd-sample/pkg/apis/iam/v1alpha2 -h ../../hack/boilerplate.go.txt --report-filename ../../api/api-rules/violation_exceptions.list
+//go:generate go run ../../vendor/k8s.io/kube-openapi/cmd/openapi-gen/openapi-gen.go -O openapi_generated -i ../../vendor/k8s.io/api/core/v1,../../vendor/k8s.io/apimachinery/pkg/apis/meta/v1,../../vendor/k8s.io/apimachinery/pkg/api/resource,../../vendor/k8s.io/apimachinery/pkg/runtime,../../vendor/k8s.io/apimachinery/pkg/util/intstr,k8s.io/apimachinery/pkg/version,./devops/v1alpha2 -p github.com/runzexia/kubesphere-crd-sample/pkg/apis/devops/v1alpha2 -h ../../hack/boilerplate.go.txt --report-filename ../../api/api-rules/violation_exceptions.list
 
 // Package apis contains Kubernetes API groups.
 package apis
