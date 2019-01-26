@@ -56,6 +56,7 @@ type DevOpsProjectStatus struct {
 
 // DevOpsProject is the Schema for the devopsprojects API
 // +k8s:openapi-gen=true
+// +kubebuilder:subresource:status
 type DevOpsProject struct {
 	metav1.TypeMeta   `json:",inline"`
 	metav1.ObjectMeta `json:"metadata,omitempty"`

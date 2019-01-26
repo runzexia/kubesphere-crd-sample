@@ -11,6 +11,8 @@ spec:
     kind: DevOpsProject
     plural: devopsprojects
   scope: Cluster
+  subresources:
+    status: {}
   validation:
     openAPIV3Schema:
       properties:

@@ -11,6 +11,8 @@ spec:
     kind: Workspace
     plural: workspaces
   scope: Cluster
+  subresources:
+    status: {}
   validation:
     openAPIV3Schema:
       properties:

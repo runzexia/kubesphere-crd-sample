@@ -56,6 +56,7 @@ type WorkspaceStatus struct {
 
 // Workspace is the Schema for the workspaces API
 // +k8s:openapi-gen=true
+// +kubebuilder:subresource:status
 type Workspace struct {
 	metav1.TypeMeta   `json:",inline"`
 	metav1.ObjectMeta `json:"metadata,omitempty"`
