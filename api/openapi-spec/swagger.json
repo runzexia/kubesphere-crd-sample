@@ -584,6 +584,163 @@
         }
       ]
     },
+    "/apis/devops.kubesphere.io/v1alpha2/devopsprojects/{name}/status": {
+      "get": {
+        "description": "read status of the specified DevOpsProject",
+        "consumes": [
+          "*/*"
+        ],
+        "produces": [
+          "application/json",
+          "application/yaml",
+          "application/vnd.kubernetes.protobuf"
+        ],
+        "schemes": [
+          "https"
+        ],
+        "tags": [
+          "devopsKubesphereIo_v1alpha2"
+        ],
+        "operationId": "readDevopsKubesphereIoV1alpha2DevOpsProjectStatus",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/com.github.runzexia.kubesphere-crd-sample.pkg.apis.devops.v1alpha2.DevOpsProject"
+            }
+          }
+        },
+        "x-kubernetes-action": "get",
+        "x-kubernetes-group-version-kind": {
+          "group": "devops.kubesphere.io",
+          "version": "v1alpha2",
+          "kind": "DevOpsProject"
+        }
+      },
+      "put": {
+        "description": "replace status of the specified DevOpsProject",
+        "consumes": [
+          "*/*"
+        ],
+        "produces": [
+          "application/json",
+          "application/yaml",
+          "application/vnd.kubernetes.protobuf"
+        ],
+        "schemes": [
+          "https"
+        ],
+        "tags": [
+          "devopsKubesphereIo_v1alpha2"
+        ],
+        "operationId": "replaceDevopsKubesphereIoV1alpha2DevOpsProjectStatus",
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/com.github.runzexia.kubesphere-crd-sample.pkg.apis.devops.v1alpha2.DevOpsProject"
+            }
+          },
+          {
+            "uniqueItems": true,
+            "type": "string",
+            "description": "When present, indicates that modifications should not be persisted. An invalid or unrecognized dryRun directive will result in an error response and no further processing of the request. Valid values are: - All: all dry run stages will be processed",
+            "name": "dryRun",
+            "in": "query"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/com.github.runzexia.kubesphere-crd-sample.pkg.apis.devops.v1alpha2.DevOpsProject"
+            }
+          },
+          "201": {
+            "description": "Created",
+            "schema": {
+              "$ref": "#/definitions/com.github.runzexia.kubesphere-crd-sample.pkg.apis.devops.v1alpha2.DevOpsProject"
+            }
+          }
+        },
+        "x-kubernetes-action": "put",
+        "x-kubernetes-group-version-kind": {
+          "group": "devops.kubesphere.io",
+          "version": "v1alpha2",
+          "kind": "DevOpsProject"
+        }
+      },
+      "patch": {
+        "description": "partially update status of the specified DevOpsProject",
+        "consumes": [
+          "application/json-patch+json",
+          "application/merge-patch+json",
+          "application/strategic-merge-patch+json"
+        ],
+        "produces": [
+          "application/json",
+          "application/yaml",
+          "application/vnd.kubernetes.protobuf"
+        ],
+        "schemes": [
+          "https"
+        ],
+        "tags": [
+          "devopsKubesphereIo_v1alpha2"
+        ],
+        "operationId": "patchDevopsKubesphereIoV1alpha2DevOpsProjectStatus",
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/io.k8s.apimachinery.pkg.apis.meta.v1.Patch"
+            }
+          },
+          {
+            "uniqueItems": true,
+            "type": "string",
+            "description": "When present, indicates that modifications should not be persisted. An invalid or unrecognized dryRun directive will result in an error response and no further processing of the request. Valid values are: - All: all dry run stages will be processed",
+            "name": "dryRun",
+            "in": "query"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/com.github.runzexia.kubesphere-crd-sample.pkg.apis.devops.v1alpha2.DevOpsProject"
+            }
+          }
+        },
+        "x-kubernetes-action": "patch",
+        "x-kubernetes-group-version-kind": {
+          "group": "devops.kubesphere.io",
+          "version": "v1alpha2",
+          "kind": "DevOpsProject"
+        }
+      },
+      "parameters": [
+        {
+          "uniqueItems": true,
+          "type": "string",
+          "description": "name of the DevOpsProject",
+          "name": "name",
+          "in": "path",
+          "required": true
+        },
+        {
+          "uniqueItems": true,
+          "type": "string",
+          "description": "If 'true', then the output is pretty printed.",
+          "name": "pretty",
+          "in": "query"
+        }
+      ]
+    },
     "/apis/devops.kubesphere.io/v1alpha2/watch/devopsprojects": {
       "get": {
         "description": "watch individual changes to a list of DevOpsProject. deprecated: use the 'watch' parameter with a list operation instead.",
@@ -1494,6 +1651,163 @@
           "iamKubesphereIo_v1alpha2"
         ],
         "operationId": "patchIamKubesphereIoV1alpha2Workspace",
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/io.k8s.apimachinery.pkg.apis.meta.v1.Patch"
+            }
+          },
+          {
+            "uniqueItems": true,
+            "type": "string",
+            "description": "When present, indicates that modifications should not be persisted. An invalid or unrecognized dryRun directive will result in an error response and no further processing of the request. Valid values are: - All: all dry run stages will be processed",
+            "name": "dryRun",
+            "in": "query"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/com.github.runzexia.kubesphere-crd-sample.pkg.apis.iam.v1alpha2.Workspace"
+            }
+          }
+        },
+        "x-kubernetes-action": "patch",
+        "x-kubernetes-group-version-kind": {
+          "group": "iam.kubesphere.io",
+          "version": "v1alpha2",
+          "kind": "Workspace"
+        }
+      },
+      "parameters": [
+        {
+          "uniqueItems": true,
+          "type": "string",
+          "description": "name of the Workspace",
+          "name": "name",
+          "in": "path",
+          "required": true
+        },
+        {
+          "uniqueItems": true,
+          "type": "string",
+          "description": "If 'true', then the output is pretty printed.",
+          "name": "pretty",
+          "in": "query"
+        }
+      ]
+    },
+    "/apis/iam.kubesphere.io/v1alpha2/workspaces/{name}/status": {
+      "get": {
+        "description": "read status of the specified Workspace",
+        "consumes": [
+          "*/*"
+        ],
+        "produces": [
+          "application/json",
+          "application/yaml",
+          "application/vnd.kubernetes.protobuf"
+        ],
+        "schemes": [
+          "https"
+        ],
+        "tags": [
+          "iamKubesphereIo_v1alpha2"
+        ],
+        "operationId": "readIamKubesphereIoV1alpha2WorkspaceStatus",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/com.github.runzexia.kubesphere-crd-sample.pkg.apis.iam.v1alpha2.Workspace"
+            }
+          }
+        },
+        "x-kubernetes-action": "get",
+        "x-kubernetes-group-version-kind": {
+          "group": "iam.kubesphere.io",
+          "version": "v1alpha2",
+          "kind": "Workspace"
+        }
+      },
+      "put": {
+        "description": "replace status of the specified Workspace",
+        "consumes": [
+          "*/*"
+        ],
+        "produces": [
+          "application/json",
+          "application/yaml",
+          "application/vnd.kubernetes.protobuf"
+        ],
+        "schemes": [
+          "https"
+        ],
+        "tags": [
+          "iamKubesphereIo_v1alpha2"
+        ],
+        "operationId": "replaceIamKubesphereIoV1alpha2WorkspaceStatus",
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/com.github.runzexia.kubesphere-crd-sample.pkg.apis.iam.v1alpha2.Workspace"
+            }
+          },
+          {
+            "uniqueItems": true,
+            "type": "string",
+            "description": "When present, indicates that modifications should not be persisted. An invalid or unrecognized dryRun directive will result in an error response and no further processing of the request. Valid values are: - All: all dry run stages will be processed",
+            "name": "dryRun",
+            "in": "query"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/com.github.runzexia.kubesphere-crd-sample.pkg.apis.iam.v1alpha2.Workspace"
+            }
+          },
+          "201": {
+            "description": "Created",
+            "schema": {
+              "$ref": "#/definitions/com.github.runzexia.kubesphere-crd-sample.pkg.apis.iam.v1alpha2.Workspace"
+            }
+          }
+        },
+        "x-kubernetes-action": "put",
+        "x-kubernetes-group-version-kind": {
+          "group": "iam.kubesphere.io",
+          "version": "v1alpha2",
+          "kind": "Workspace"
+        }
+      },
+      "patch": {
+        "description": "partially update status of the specified Workspace",
+        "consumes": [
+          "application/json-patch+json",
+          "application/merge-patch+json",
+          "application/strategic-merge-patch+json"
+        ],
+        "produces": [
+          "application/json",
+          "application/yaml",
+          "application/vnd.kubernetes.protobuf"
+        ],
+        "schemes": [
+          "https"
+        ],
+        "tags": [
+          "iamKubesphereIo_v1alpha2"
+        ],
+        "operationId": "patchIamKubesphereIoV1alpha2WorkspaceStatus",
         "parameters": [
           {
             "name": "body",
